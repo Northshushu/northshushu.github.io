@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://northshushu.github.io/sitemap.xml
+Sitemap: https://xinkaima1.github.io/sitemap.xml
