@@ -6,6 +6,7 @@ img:
 importance: 2
 category: Robotics Competition
 related_publications: false
+group: work
 ---
 
 ## CRAIC Simuro Football Project

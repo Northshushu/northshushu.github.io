@@ -6,6 +6,7 @@ img:
 importance: 1
 category: Robotics Competition
 related_publications: false
+group: work
 ---
 
 ## CRAIC Lunar Exploration Project
