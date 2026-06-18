@@ -98,7 +98,9 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Inject language switcher script 🌐
-        run: python3 inject-language-script.py
+        run: |
+          find _site -name "*.html" -type f -exec sed -i 's|</body>|<script src="/assets/js/language-switcher.js"></script>\n</body>|g' {} +
+          echo "Injected language-switcher.js into all HTML files"
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
