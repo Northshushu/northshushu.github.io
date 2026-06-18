@@ -21,25 +21,19 @@ def inject_script():
                     if 'language-switcher.js' in content:
                         continue
                     
-                    # Try to inject before </body>
-                    body_patterns = [r'</body>', r'</body\s*>', r'</BODY>']
-                    injected = False
-                    
-                    for pattern in body_patterns:
-                        if re.search(pattern, content):
-                            content = re.sub(pattern, script_tag + r'</body>', content, count=1)
-                            injected = True
-                            break
-                    
-                    if not injected:
-                        # Fallback: append to end of file
-                        content += '\n' + script_tag
-                    
-                    with open(path, 'w', encoding='utf-8') as fp:
-                        fp.write(content)
-                    
-                    count += 1
-                    print(f'Injected: {path}')
+                    # Find </body> and inject before it
+                    # Handle possible whitespace variations
+                    body_match = re.search(r'</body>\s*$', content, re.MULTILINE)
+                    if body_match:
+                        # Inject before </body>
+                        content = content[:body_match.start()] + script_tag + content[body_match.start():]
+                        with open(path, 'w', encoding='utf-8') as fp:
+                            fp.write(content)
+                        count += 1
+                        print(f'Injected: {path}')
+                    else:
+                        print(f'WARN: </body> not found in {path}', file=sys.stderr)
+                
                 except Exception as e:
                     print(f'Error processing {path}: {e}', file=sys.stderr)
     
