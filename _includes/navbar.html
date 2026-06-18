@@ -1,0 +1,69 @@
+<!-- Navigation bar override with language switcher -->
+<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+  <div class="container">
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler collapsed navbar-toggler-main"
+      type="button"
+      data-nav-toggle="navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar top-bar"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav">
+      <ul class="navbar-nav navbar-menu-list flex-nowrap">
+        <!-- About -->
+        <li class="nav-item {% if page.permalink == '/' or page.title == 'about' %}active{% endif %}">
+          <a class="nav-link" href="/">about</a>
+        </li>
+
+        <!-- Projects -->
+        <li class="nav-item {% if page.permalink contains '/projects' %}active{% endif %}">
+          <a class="nav-link" href="/projects/">projects</a>
+        </li>
+
+        <!-- CV -->
+        <li class="nav-item {% if page.permalink contains '/cv' %}active{% endif %}">
+          <a class="nav-link" href="/cv/">CV</a>
+        </li>
+
+        <!-- Language Switcher -->
+        <li class="nav-item">
+          {% assign current_lang = 'en' %}
+          {% if page.permalink contains '-zh' or page.permalink contains '/zh/' %}
+            {% assign current_lang = 'zh' %}
+          {% endif %}
+
+          {% if current_lang == 'en' %}
+            <a class="nav-link" href="/about-zh/" title="切换到中文">🇨🇳 中文</a>
+          {% else %}
+            <a class="nav-link" href="/" title="Switch to English">🇬🇧 EN</a>
+          {% endif %}
+        </li>
+
+        <!-- Search -->
+        <li class="nav-item">
+          <button id="search-toggle" type="button" title="Search" aria-label="Open search">
+            <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+          </button>
+        </li>
+
+        <!-- Theme toggle -->
+        <li class="nav-item">
+          <div class="theme-toggle-container">
+            <button id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+              <span class="nav-link"><i class="fa-solid fa-circle-half-stroke"></i></span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
