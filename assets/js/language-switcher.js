@@ -1,115 +1,41 @@
-// Language switcher for al-folio theme
-// Injects a language toggle button into the navbar or as floating button
+// Language switcher - floating button
+// This file creates a floating language toggle button
 
 (function() {
-  'use strict';
-
-  function injectButton() {
-    // Try to find the navbar first
-    var navbar = document.querySelector('#navbar') || document.querySelector('.navbar');
-    if (!navbar) {
-      // Navbar not found, create floating button
-      createFloatingButton();
-      return;
-    }
-
-    // Find the toggle-container li (contains theme toggle button)
-    var toggleContainer = navbar.querySelector('.toggle-container') || 
-                          navbar.querySelector('[id*="toggle"]') ||
-                          navbar.querySelector('.nav-item:last-child');
-    
-    if (!toggleContainer) {
-      // Toggle container not found, try to find the theme toggle button
-      var themeToggle = navbar.querySelector('#light-toggle') || 
-                           navbar.querySelector('[id*="theme"]');
-      if (themeToggle) {
-        toggleContainer = themeToggle.closest('li') || themeToggle.parentNode;
-      }
-    }
-
-    // Determine current language
+  // Create button
+  var btn = document.createElement('div');
+  btn.id = 'lang-btn';
+  btn.style.cssText = 'position:fixed;top:60px;right:20px;z-index:99999;background:#fff;color:#333;padding:10px 18px;border-radius:25px;box-shadow:0 4px 20px rgba(0,0,0,0.25);cursor:pointer;font-size:15px;font-weight:600;transition:all 0.3s;border:2px solid #4a9eff;user-select:none;';
+  
+  // Set text based on current path
+  var isZh = window.location.pathname.includes('/about-zh/') || window.location.pathname.includes('/zh/');
+  btn.innerHTML = isZh ? '🇺🇸 EN' : '🇨🇳 中文';
+  btn.title = isZh ? 'Switch to English' : 'Switch to Chinese';
+  
+  // Click handler
+  btn.onclick = function() {
     var path = window.location.pathname;
-    var isChinese = path.includes('/about-zh/') || path.includes('/zh/');
-
-    // Create button element
-    var btn = document.createElement('button');
-    btn.id = 'lang-toggle-btn';
-    btn.type = 'button';
-    btn.title = isChinese ? 'Switch to English' : '切换到中文';
-    btn.setAttribute('aria-label', isChinese ? 'Switch to English' : '切换到中文');
-    btn.style.cssText = 'background:none; border:1px solid #ddd; border-radius:4px; cursor:pointer; padding:6px 10px; font-size:13px; color:inherit; margin-left:8px;';
-    btn.innerHTML = isChinese ? '🇺🇸 EN' : '🇨🇳 中文';
-
-    // Click handler
-    btn.addEventListener('click', function() {
-      var currentPath = window.location.pathname;
-
-      if (currentPath.includes('/about-zh/')) {
-        window.location.href = '/about/';
-      } else if (currentPath.includes('/about/')) {
-        window.location.href = '/about-zh/';
-      } else if (currentPath.includes('/zh/')) {
-        window.location.href = currentPath.replace('/zh/', '/');
-      } else {
-        window.location.href = '/zh' + (currentPath === '/' ? '/' : currentPath);
-      }
-    });
-
-    // Try to insert into navbar
-    if (toggleContainer && toggleContainer.parentNode) {
-      // Insert before toggle-container
-      toggleContainer.parentNode.insertBefore(btn, toggleContainer);
-      console.log('Language switcher: injected into navbar');
+    if (path.includes('/about-zh/')) {
+      window.location.href = '/about/';
+    } else if (path.includes('/about/')) {
+      window.location.href = '/about-zh/';
+    } else if (path.includes('/zh/')) {
+      window.location.href = path.replace('/zh/', '/');
     } else {
-      // Fallback: append to navbar
-      var navbarNav = navbar.querySelector('.navbar-nav') || navbar;
-      if (navbarNav) {
-        navbarNav.appendChild(btn);
-        console.log('Language switcher: appended to navbar');
-      } else {
-        // Final fallback: create floating button
-        createFloatingButton();
-      }
+      window.location.href = '/zh' + (path === '/' ? '/' : path);
     }
-  }
-
-  function createFloatingButton() {
-    // Check if button already exists
-    if (document.getElementById('lang-float-btn')) {
-      return;
-    }
-
-    var path = window.location.pathname;
-    var isChinese = path.includes('/about-zh/') || path.includes('/zh/');
-
-    var btn = document.createElement('div');
-    btn.id = 'lang-float-btn';
-    btn.innerHTML = isChinese ? '🇺🇸 EN' : '🇨🇳 中文';
-    btn.style.cssText = 'position:fixed;top:15px;right:80px;z-index:9999;background:#fff;color:#333;padding:8px 15px;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,0.15);cursor:pointer;font-size:14px;font-weight:500;';
-    
-    btn.onclick = function() {
-      var currentPath = window.location.pathname;
-      if (currentPath.includes('/about-zh/')) {
-        window.location.href = '/about/';
-      } else if (currentPath.includes('/about/')) {
-        window.location.href = '/about-zh/';
-      } else if (currentPath.includes('/zh/')) {
-        window.location.href = currentPath.replace('/zh/', '/');
-      } else {
-        window.location.href = '/zh' + (currentPath === '/' ? '/' : currentPath);
-      }
-    };
-
-    document.body.appendChild(btn);
-    console.log('Language switcher: created floating button');
-  }
-
-  // Run on DOM ready
+  };
+  
+  // Hover effects
+  btn.onmouseover = function() { this.style.boxShadow = '0 6px 25px rgba(0,0,0,0.35)'; };
+  btn.onmouseout = function() { this.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)'; };
+  
+  // Add to page
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(injectButton, 500);
+      document.body.appendChild(btn);
     });
   } else {
-    setTimeout(injectButton, 500);
+    document.body.appendChild(btn);
   }
 })();
