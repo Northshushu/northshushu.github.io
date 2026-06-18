@@ -2,33 +2,49 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://www.jlu.edu.cn/'>Jilin University</a>. Changchun, China.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>College of Biological and Agricultural Engineering</p>
+    <p>Jilin University</p>
+    <p>Changchun, Jilin, China</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
-
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
-
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+## About Me
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Hello! I'm **Xinkai Ma (马鑫凯)**, an undergraduate student at **Jilin University**.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm currently studying in the **College of Biological and Agricultural Engineering** (2023-2026), with a background in Life Sciences (2022-2023). My academic journey has given me a unique interdisciplinary perspective, bridging biology with engineering principles.
+
+## Research & Projects
+
+I'm passionate about robotics and AI competitions. I'm actively involved in the **CRAIC (China Robot Artificial Intelligence Competition)** projects:
+
+- **🌙 Lunar Exploration Project** - Developing autonomous navigation and exploration systems for lunar rover robots
+- **⚽ Simuro Football Project** - Building AI strategies for simulated robot soccer competitions
+
+These projects allow me to apply engineering knowledge to solve real-world robotic challenges, from path planning to decision-making algorithms.
+
+## Interests
+
+- 🤖 Robotics & Autonomous Systems
+- 🧠 Artificial Intelligence & Machine Learning
+- 🚀 Space Exploration Technologies
+- ⚡ Embedded Systems & Control
+
+Feel free to reach out if you'd like to collaborate or discuss any of these topics!
