@@ -1,7 +1,11 @@
-<style>
-.page-content a, .post a, article a { color: #2c6fbb !important; text-decoration: none; }
-.page-content a:hover, .post a:hover, article a:hover { color: #1a4d8f !important; text-decoration: underline; }
-</style>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.clearfix a, .post a, article a');
+  links.forEach(function(link) {
+    link.style.color = '#2c6fbb';
+  });
+});
+</script>
 
 ## About Me
 [EN] Hello! I'm **Xinkai Ma (马鑫凯)**, an undergraduate student at **Jilin University**.
