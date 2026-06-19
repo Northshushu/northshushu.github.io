@@ -9,11 +9,11 @@
 [EN] I'm passionate about robotics and AI competitions. I'm actively involved in the **CRAIC (China Robot Artificial Intelligence Competition)** projects:
 [ZH] 我对机器人技术和人工智能竞赛充满热情。我积极参与 **CRAIC（中国机器人人工智能大赛）** 项目：
 
-[EN] - [**🌙 Lunar Exploration Project**](/projects/craic_lunar/) - Developing autonomous navigation and exploration systems for lunar rover robots
-[ZH] - [**🌙 月球探测项目**](/projects/craic_lunar/) — 为月球探测机器人开发自主导航与探测系统
+[EN] - [**🌙 Lunar Exploration Project**](/projects/1_craic_lunar/) - Developing autonomous navigation and exploration systems for lunar rover robots
+[ZH] - [**🌙 月球探测项目**](/projects/1_craic_lunar/) — 为月球探测机器人开发自主导航与探测系统
 
-[EN] - [**⚽ Simuro Football Project**](/projects/craic_simuro/) - Building AI strategies for simulated robot soccer competitions
-[ZH] - [**⚽ Simuro 足球项目**](/projects/craic_simuro/) — 为仿真机器人足球竞赛构建 AI 策略
+[EN] - [**⚽ Simuro Football Project**](/projects/2_craic_simuro/) - Building AI strategies for simulated robot soccer competitions
+[ZH] - [**⚽ Simuro 足球项目**](/projects/2_craic_simuro/) — 为仿真机器人足球竞赛构建 AI 策略
 
 [EN] These projects allow me to apply engineering knowledge to solve real-world robotic challenges, from path planning to decision-making algorithms.
 [ZH] 这些项目使我能够将工程知识应用于解决真实世界的机器人挑战，从路径规划到决策算法。
