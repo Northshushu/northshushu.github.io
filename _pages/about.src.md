@@ -1,3 +1,8 @@
+<style>
+.page-content a, .post a, article a { color: #2c6fbb !important; text-decoration: none; }
+.page-content a:hover, .post a:hover, article a:hover { color: #1a4d8f !important; text-decoration: underline; }
+</style>
+
 ## About Me
 [EN] Hello! I'm **Xinkai Ma (马鑫凯)**, an undergraduate student at **Jilin University**.
 [ZH] 你好！我是**马鑫凯 (Xinkai Ma)**，**吉林大学**的本科生。
