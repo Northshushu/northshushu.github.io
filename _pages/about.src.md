@@ -1,12 +1,3 @@
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('.clearfix a, .post a, article a');
-  links.forEach(function(link) {
-    link.style.color = '#2c6fbb';
-  });
-});
-</script>
-
 ## About Me
 [EN] Hello! I'm **Xinkai Ma (马鑫凯)**, an undergraduate student at **Jilin University**.
 [ZH] 你好！我是**马鑫凯 (Xinkai Ma)**，**吉林大学**的本科生。
@@ -18,11 +9,11 @@ window.addEventListener('DOMContentLoaded', function() {
 [EN] I'm passionate about robotics and AI competitions. I'm actively involved in the **CRAIC (China Robot Artificial Intelligence Competition)** projects:
 [ZH] 我对机器人技术和人工智能竞赛充满热情。我积极参与 **CRAIC（中国机器人人工智能大赛）** 项目：
 
-[EN] - [**🌙 Lunar Exploration Project**](/projects/1_craic_lunar/) - Developing autonomous navigation and exploration systems for lunar rover robots
-[ZH] - [**🌙 月球探测项目**](/projects/1_craic_lunar/) — 为月球探测机器人开发自主导航与探测系统
+[EN] - <a href="/projects/1_craic_lunar/"><strong>🌙 Lunar Exploration Project</strong></a> - Developing autonomous navigation and exploration systems for lunar rover robots
+[ZH] - <a href="/projects/1_craic_lunar/"><strong>🌙 月球探测项目</strong></a> — 为月球探测机器人开发自主导航与探测系统
 
-[EN] - [**⚽ Simuro Football Project**](/projects/2_craic_simuro/) - Building AI strategies for simulated robot soccer competitions
-[ZH] - [**⚽ Simuro 足球项目**](/projects/2_craic_simuro/) — 为仿真机器人足球竞赛构建 AI 策略
+[EN] - <a href="/projects/2_craic_simuro/"><strong>⚽ Simuro Football Project</strong></a> - Building AI strategies for simulated robot soccer competitions
+[ZH] - <a href="/projects/2_craic_simuro/"><strong>⚽ Simuro 足球项目</strong></a> — 为仿真机器人足球竞赛构建 AI 策略
 
 [EN] These projects allow me to apply engineering knowledge to solve real-world robotic challenges, from path planning to decision-making algorithms.
 [ZH] 这些项目使我能够将工程知识应用于解决真实世界的机器人挑战，从路径规划到决策算法。

@@ -25,15 +25,6 @@ latest_posts:
   limit: 3
 ---
 
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('.clearfix a, .post a, article a');
-  links.forEach(function(link) {
-    link.style.color = '#2c6fbb';
-  });
-});
-</script>
-
 ## About Me
  Hello! I'm **Xinkai Ma (马鑫凯)**, an undergraduate student at **Jilin University**.
 
@@ -42,9 +33,9 @@ window.addEventListener('DOMContentLoaded', function() {
 ## Research & Projects
  I'm passionate about robotics and AI competitions. I'm actively involved in the **CRAIC (China Robot Artificial Intelligence Competition)** projects:
 
- - [**🌙 Lunar Exploration Project**](/projects/1_craic_lunar/) - Developing autonomous navigation and exploration systems for lunar rover robots
+ - <a href="/projects/1_craic_lunar/"><strong>🌙 Lunar Exploration Project</strong></a> - Developing autonomous navigation and exploration systems for lunar rover robots
 
- - [**⚽ Simuro Football Project**](/projects/2_craic_simuro/) - Building AI strategies for simulated robot soccer competitions
+ - <a href="/projects/2_craic_simuro/"><strong>⚽ Simuro Football Project</strong></a> - Building AI strategies for simulated robot soccer competitions
 
  These projects allow me to apply engineering knowledge to solve real-world robotic challenges, from path planning to decision-making algorithms.
 

@@ -25,15 +25,6 @@ latest_posts:
   limit: 3
 ---
 
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('.clearfix a, .post a, article a');
-  links.forEach(function(link) {
-    link.style.color = '#2c6fbb';
-  });
-});
-</script>
-
 ## About Me
  你好！我是**马鑫凯 (Xinkai Ma)**，**吉林大学**的本科生。
 
@@ -42,9 +33,9 @@ window.addEventListener('DOMContentLoaded', function() {
 ## Research & Projects
  我对机器人技术和人工智能竞赛充满热情。我积极参与 **CRAIC（中国机器人人工智能大赛）** 项目：
 
- - [**🌙 月球探测项目**](/projects/1_craic_lunar/) — 为月球探测机器人开发自主导航与探测系统
+ - <a href="/projects/1_craic_lunar/"><strong>🌙 月球探测项目</strong></a> — 为月球探测机器人开发自主导航与探测系统
 
- - [**⚽ Simuro 足球项目**](/projects/2_craic_simuro/) — 为仿真机器人足球竞赛构建 AI 策略
+ - <a href="/projects/2_craic_simuro/"><strong>⚽ Simuro 足球项目</strong></a> — 为仿真机器人足球竞赛构建 AI 策略
 
  这些项目使我能够将工程知识应用于解决真实世界的机器人挑战，从路径规划到决策算法。
 
