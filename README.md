@@ -1,8 +1,5 @@
 # 马鑫凯 | Xinkai Ma 个人学术主页
 
-<p align="center">
-  <img src="assets/img/prof_pic.jpg" alt="profile" width="200" style="border-radius: 50%;"/>
-</p>
 
 <p align="center">
   <a href="https://xinkaima1.github.io"><strong>🌐 学术主页</strong></a> ·
