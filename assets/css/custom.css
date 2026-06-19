@@ -1,0 +1,13 @@
+/* Custom CSS for xinkaima1.github.io */
+/* Fix link color in about page */
+
+/* Make all links in post content blue */
+.post a {
+  color: #2c6fbb;
+  text-decoration: none;
+}
+
+.post a:hover {
+  color: #1a4d8f;
+  text-decoration: underline;
+}
